@@ -72,3 +72,20 @@ body {
 .btn-acessar:hover {
     background-color: #e1e1e1;
 }
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* espaçamento entre os blocos */
+    text-align: left;
+}
+
+.box-titulo1 {
+    background-color: #F3F3F3;
+    border: 3px solid #000000;
+    padding: 20px 30px;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+}
