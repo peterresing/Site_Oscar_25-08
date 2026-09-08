@@ -73,7 +73,7 @@ body {
     background-color: #e1e1e1;
 }
 
-.container1 {
+.container0 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +81,7 @@ body {
     text-align: left;
 }
 
-.box-titulo1 {
+.box-titulo0 {
     background-color: #F3F3F3;
     border: 3px solid #000000;
     padding: 20px 30px;
