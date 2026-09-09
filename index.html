@@ -7,41 +7,50 @@
     <link rel="stylesheet" href="css/style.css">
     </div>
 </head>
-<body>
-<div class="body"></div>
-   <!-- Nome da Base (primeira pagina) -->
-    <div id="conteudo-principal" class="container">
-        
-        <!-- Título -->
-        <div class="box-titulo">
-            <h1>Big Bang: A<br>Descoberta à Teoria</h1>
+<body><!-- PRIMEIRA TELA -->
+    <div id="tela1">
+        <div class="coluna-esquerda">
+            <div class="caixa-titulo">
+                <h1>Big Bang: A Descoberta à Teoria</h1>
+            </div>
+
+            <div class="caixa-criadores">
+                <strong>Criadores:</strong><br>
+                Peter e Rodrigo
+            </div>
+
+            <button class="btn-acessar" onclick="abrirPaginas()">
+                Acessar<br>Páginas
+            </button>
         </div>
-
-        <!-- Nossos nomes -->
-        <div class="box-criadores">
-            <p>Criadores:<br>Peter e Rodrigo</p>
-        </div>
-
-        <!-- Botão pra iniciar -->
-        <button class="btn-acessar" onclick="limparTela()">
-            Acessar<br>Páginas
-        </button>
-
-    </div> <!-- Fim da Primeira Página -->
-
-    <!-- Segunda Página -->
-    <div id="pagina1" class="container0">
-
-        <!-- Teste -->
-        <div class="box-titulo0">
-            <h1>Contexto</h1>
-            <h1>Teste</h1>
-        </div>
-
     </div>
 
-</div>
+    <!-- SEGUNDA TELA -->
+    <div id="tela2">
+        <button class="btn-fechar" onclick="fecharPaginas()">✕</button>
 
+        <div class="container-paginas">
+            <div class="pagina-quadro">
+                <h2>Big Bang: a Descoberta à Teoria</h2>
+                <p>Desde os tempos antigos, a humanidade busca entender a origem do Universo. Antes da ciência moderna, diferentes povos criavam mitos e histórias para explicar o surgimento do mundo. Durante séculos, acreditou-se que o Universo era eterno e imutável.</p>
+                <p>Com o avanço da ciência, especialmente pelos estudos de Nicolau Copérnico, Galileu Galilei, Johannes Kepler e Isaac Newton, a humanidade passou a compreender melhor o funcionamento do cosmos. Newton mostrou que os mesmos princípios físicos governavam a Terra e os corpos celestes, reforçando a ideia de um Universo organizado e permanente.</p>
+                <p>Essa visão dominou por séculos, até que novas descobertas no século XX mostraram que o Universo não era estático.</p>
+            </div>
+
+            <div class="pagina-quadro">
+                <p>No início do século XX, Albert Einstein começou a desenvolver ideias que transformariam a compreensão do Universo. Em 1915, apresentou a Teoria da Relatividade Geral, na qual mostrou que a gravidade não era apenas uma força invisível, mas uma consequência da curvatura do espaço-tempo causada pela matéria e pela energia.</p>
+                <p>Sua teoria explicou fenômenos que a física de Newton não conseguia descrever completamente, como o comportamento da luz ao passar por grandes massas e a existência de fenômenos como os buracos negros. Porém, ao aplicar suas equações ao Universo inteiro, Einstein percebeu que elas indicavam um Universo em movimento, que poderia estar se expandindo ou se contraindo. Como naquela época a maioria dos cientistas acreditava em um Universo estático, Einstein adicionou a constante cosmológica às suas equações para impedir essa mudança.</p>
+            </div>
+        </div>
+
+        <div class="barra-cores">
+            <div class="circulo preto"></div>
+            <div class="circulo azul"></div>
+            <div class="circulo roto"></div>
+            <div class="circulo amarelo"></div>
+        </div>
+    </div>
+    
 <script src="js/script.js"></script>
 </body>
 </html>
