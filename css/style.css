@@ -168,7 +168,7 @@ body {
 }
 
 /* Botões do seletor mantendo a referência visual com tons suavizados */
-.preto { background-color: #D6D6D6; }
-.azul { background-color: #A6C8FF; }
-.roto { background-color: #DDA2E6; }
-.amarelo { background-color: #FFE866; }
+.preto { background-color: #1E1E1E; }
+.azul { background-color: #0051CC; }
+.roto { background-color: #782C77; }
+.amarelo { background-color: #E0C600; }

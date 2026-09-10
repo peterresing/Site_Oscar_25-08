@@ -8,6 +8,14 @@ function fecharPaginas() {
     document.getElementById('tela2').style.display = 'none';
 }
 
-function trocarCor(cor) {
-    document.getElementById('tela2').style.backgroundColor = cor;
+function trocarCor(corFundoTela, corPagina, corTexto = '#111111') {
+    // Altera o fundo da tela principal para o tom claro
+    document.getElementById('tela2').style.backgroundColor = corFundoTela;
+
+    // Ajusta o fundo e a cor das letras das páginas
+    const paginas = document.querySelectorAll('.pagina-quadro');
+    paginas.forEach(pagina => {
+        pagina.style.backgroundColor = corPagina;
+        pagina.style.color = corTexto;
+    });
 }
