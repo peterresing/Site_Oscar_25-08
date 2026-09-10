@@ -76,7 +76,7 @@ body {
 /* === SEGUNDA TELA === */
 #tela2 {
     display: none;
-    background-color: #F2F2F2; /* Inicialmente num tom bem claro */
+    background-color: #E6E6E6; /* Inicialmente num tom bem claro */
     padding: 50px 30px 30px 30px;
     position: relative;
     height: 590px;
@@ -114,7 +114,7 @@ body {
 }
 
 .pagina-quadro {
-    background-color: #FFFFFF; /* Fundo branco por padrão para facilitar a leitura */
+    background-color: #E6E6E6; /* Fundo branco por padrão para facilitar a leitura */
     border-radius: 8px;
     padding: 30px;
     flex: 1;
@@ -145,7 +145,7 @@ body {
     justify-content: center;
     gap: 20px;
     margin-top: 25px;
-    background: #FFFFFF;
+    background: #e6e6e6;
     padding: 10px 20px;
     border-radius: 8px;
     width: fit-content;
