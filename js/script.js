@@ -8,6 +8,6 @@ function fecharPaginas() {
     document.getElementById('tela2').style.display = 'none';
 }
 
-function trocarCorR() {
-    document.getElementById('tela2').style.display = ''; 
+function trocarCor(cor) {
+    document.getElementById('tela2').style.backgroundColor = cor;
 }
