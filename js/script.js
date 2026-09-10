@@ -9,10 +9,10 @@ function fecharPaginas() {
 }
 
 function trocarCor(corFundoTela, corPagina, corTexto = '#111111') {
-    // Altera o fundo da tela principal para o tom claro
+    // altera o fundo da tela principal
     document.getElementById('tela2').style.backgroundColor = corFundoTela;
 
-    // Ajusta o fundo e a cor das letras das páginas
+    // ajusta o fundo e a cor das letras das paginas
     const paginas = document.querySelectorAll('.pagina-quadro');
     paginas.forEach(pagina => {
         pagina.style.backgroundColor = corPagina;
