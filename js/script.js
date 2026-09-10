@@ -7,3 +7,7 @@ function fecharPaginas() {
     document.getElementById('tela1').style.display = 'flex';
     document.getElementById('tela2').style.display = 'none';
 }
+
+function trocarCorR() {
+    document.getElementById('tela2').style.display = ''; 
+}
