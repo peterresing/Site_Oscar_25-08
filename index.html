@@ -3,52 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Teste</title>
+    <title>Big Bang: A Descoberta à Teoria</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- PRIMEIRA TELA -->
-    <div id="tela1">
-        <div class="coluna-esquerda">
-            <div class="caixa-titulo">
-                <h1>Big Bang:<br>A Descoberta à Teoria</h1>
-            </div>
 
-            <div class="caixa-criadores">
-                Criadores:<br>
-                Peter e Rodrigo
-            </div>
+    <div id="conteudo-principal" class="container">
 
-            <button class="btn-acessar" onclick="abrirPaginas()">
-                Acessar<br>Páginas
-            </button>
-        </div>
-    </div>
-
-    <!-- SEGUNDA TELA -->
-    <div id="tela2">
-        <button class="btn-fechar" onclick="fecharPaginas()">X</button>
-
-        <div class="container-paginas">
-            <div class="pagina-quadro">
-                <h2>Big Bang: a Descoberta à Teoria</h2>
-                <p>Desde os tempos antigos, a humanidade busca entender a origem do Universo. Antes da ciência moderna, diferentes povos criavam mitos e histórias para explicar o surgimento do mundo. Durante séculos, acreditou-se que o Universo era eterno e imutável.</p>
-                <p>Com o avanço da ciência, especialmente pelos estudos de Nicolau Copérnico, Galileu Galilei, Johannes Kepler e Isaac Newton, a humanidade passou a compreender melhor o funcionamento do cosmos. Newton mostrou que os mesmos princípios físicos governavam a Terra e os corpos celestes, reforçando a ideia de um Universo organizado e permanente.</p>
-                <p>Essa visão dominou por séculos, até que novas descobertas no século XX mostraram que o Universo não era estático.</p>
-            </div>
-
-            <div class="pagina-quadro">
-                <p>No início do século XX, Albert Einstein começou a desenvolver ideias que transformariam a compreensão do Universo. Em 1915, apresentou a Teoria da Relatividade Geral, na qual mostrou que a gravidade não era apenas uma força invisível, mas uma consequência da curvatura do espaço-tempo causada pela matéria e pela energia.</p>
-                <p>Sua teoria explicou fenômenos que a física de Newton não conseguia descrever completamente, como o comportamento da luz ao passar por grandes massas e a existência de fenômenos como os buracos negros. Porém, ao aplicar suas equações ao Universo inteiro, Einstein percebeu que elas indicavam um Universo em movimento, que poderia estar se expandindo ou se contraindo. Como naquela época a maioria dos cientistas acreditava em um Universo estático, Einstein adicionou a constante cosmológica às suas equações para impedir essa mudança.</p>
-            </div>
+        <div class="box-titulo">
+            <h1>Big Bang: A<br>Descoberta à Teoria</h1>
         </div>
 
-        <div class="barra-cores">
-            <div class="circulo preto" onclick="trocarCor('#1E1E1E')"></div>
-            <div class="circulo azul" onclick="trocarCor('#0051CC')"></div>
-            <div class="circulo roto" onclick="trocarCor('#782C77')"></div>
-            <div class="circulo amarelo" onclick="trocarCor('#E0C600')"></div>
+        <div class="box-criadores">
+            <p>Criadores:<br>Peter e Rodrigo</p>
         </div>
+
+        <button class="btn-acessar" onclick="abrirPagina()">
+            Acessar<br>Páginas
+        </button>
+
     </div>
 
     <script src="js/script.js"></script>
