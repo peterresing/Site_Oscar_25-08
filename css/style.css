@@ -1,133 +1,157 @@
 /* a base do site*/
-   body {
-      background-color: #E0E0E0;
-      font-family: 'Krona One', sans-serif;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
- 
-  .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-      text-align: left;
-  }
- 
-  /* tela principal */
-  .box-titulo {
-      background-color: #F3F3F3;
-      border: 8px solid #000000;
-      padding: 20px 30px;
-      width: 450px;
-      border-radius: 5px;
-  }
- 
-  .box-titulo h1 {
-      margin: 0;
-      font-size: 32px;
-      color: #000000;
-      line-height: 1.2;
-      font-weight: bold;
-  }
- 
-  .box-criadores {
-      display: flex;
-      background-color: #F3F3F3;
-      border: 5px solid #000000;
-      padding: 10px 15px;
-      width: 250px;
-      align-self: center;
-      border-radius: 5px;
-      justify-self: center;
-      margin-top: 30px;
-      
-  }
- 
-  .box-criadores p {
-      margin: 0;
-      font-size: 20px;
-      color: #000000;
-      line-height: 1.3;
-      font-weight: bold;
-  }
- 
-  .btn-acessar {
-      background-color: #F3F3F3;
-      border: 9px solid #000000;
-      padding: 20px 30px;
-      width: 515px;
-      font-size: 42px;
-      font-weight: bold;
-      color: #000000;
-      cursor: pointer;
-      text-align: center;
-      margin-top: 40px;
-      transition: background-color 0.3s ease;
-      border-radius: 5px;
-  }
- 
-  .btn-acessar:hover {
-      background-color: #c6c6c6;
-  }
- 
-  /* oq aparece quando aperta em acessar */
-  .pagina-conteudo {
-      width: 100vw;
-      height: 100vh;
-      background-color: #202020;
-      position: relative;
-      padding: 0;
-      box-sizing: border-box;
-      overflow: hidden;
-      transition: background-color 0.3s ease;
-  }
- 
-  .btn-fechar {
-      position: absolute;
-      right: 26px;
-      top: 27px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: solid 2px;
-      background-color: #eeeeee;
-      font-size: 42px;
-      font-weight: 200;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-  }
- 
-  .btn-fechar:hover {
-      background-color: #d5d5d5;
-  }
- 
-  .conteudo-topo {
-      display: flex;
-      gap: 24px;
-      width: calc(100% - 200px);
-      max-width: 1400px;
-      margin: 155px auto 0;
-  }
- 
-  .caixa-texto {
-      background-color: #c6c6c6;
-      width: 50%;
-      height: 465px;
-      border-radius: 5px;
-      padding: 22px;
-      box-sizing: border-box;
-      overflow-y: auto;
-      overflow-x: hidden;
-  }
- 
-  .caixa-texto {
+body {
+   background-color: #e0e0e0;
+   font-family: 'Krona One', sans-serif;
+   margin: 0;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: left;
+   position: relative;
+   z-index: 2;
+}
+
+/* planeta no fundo do site*/
+.espaco-bg {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   pointer-events: none;
+   z-index: 1;
+   overflow: hidden;
+}
+
+.planeta, .estela {
+   position: absolute;
+   user-select: none;
+   animation: flutuar 6s ease-in-out infinite alternate;
+}
+
+/* lugar dos planetas */
+.p1 { top: 6%; left: 4%; font-size: 70px; animation-duration: 7s; }   /* saturno */
+.p2 { bottom: 8%; left: 5%; font-size: 60px; animation-duration: 9s; }  /* terra */
+.p3 { top: 8%; right: 5%; font-size: 50px; animation-duration: 6s; }  /* lua */
+.p4 { bottom: 6%; right: 4%; font-size: 75px; animation-duration: 8s; } /* sol */
+
+.e1 { top: 45%; left: 2%; font-size: 28px; animation-duration: 4s; }   /* Brilho */
+.e2 { top: 48%; right: 2%; font-size: 32px; animation-duration: 5s; }  /* estrela */
+
+@keyframes flutuar {
+   0% { transform: translateY(0px) rotate(0deg); }
+   100% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* tela inicial */
+#tela-inicial {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.box-titulo {
+   background-color: #F3F3F3;
+   border: 8px solid #000000;
+   padding: 20px 30px;
+   width: 450px;
+   border-radius: 5px;
+}
+
+.box-titulo h1 {
+   margin: 0;
+   font-size: 32px;
+   color: #000000;
+   line-height: 1.2;
+   font-weight: bold;
+}
+
+.box-criadores {
+   display: flex;
+   background-color: #F3F3F3;
+   border: 5px solid #000000;
+   padding: 10px 15px;
+   width: 220px;
+   border-radius: 5px;
+   margin-top: 15px;
+}
+
+.box-criadores p {
+   margin: 0;
+   font-size: 16px;
+   color: #000000;
+   line-height: 1.3;
+   font-weight: bold;
+}
+
+.btn-acessar {
+   background-color: #F3F3F3;
+   border: 9px solid #000000;
+   padding: 20px 30px;
+   width: 515px;
+   font-size: 42px;
+   font-weight: bold;
+   color: #000000;
+   cursor: pointer;
+   text-align: center;
+   margin-top: 40px;
+   transition: background-color 0.3s ease;
+   border-radius: 5px;
+}
+
+.btn-acessar:hover {
+   background-color: #c6c6c6;
+}
+
+/* as paginas */
+.pagina-conteudo {
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(32, 32, 32); 
+   position: relative;
+   box-sizing: border-box;
+   transition: background-color 0.3s ease;
+}
+
+.btn-fechar {
+   position: absolute;
+   right: 26px;
+   top: 27px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   border: none;
+   background-color: #eeeeee;
+   font-size: 42px;
+   font-weight: 200;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 10;
+}
+
+.btn-fechar:hover {
+   background-color: #d5d5d5;
+}
+
+.conteudo-topo {
+   display: flex;
+   gap: 24px;
+   width: calc(100% - 200px);
+   max-width: 1400px;
+   margin: 155px auto 0;
+}
+
+.caixa-texto {
    background-color: #c6c6c6;
    width: 50%;
    height: 465px;
@@ -136,79 +160,65 @@
    box-sizing: border-box;
    overflow-y: auto;
    overflow-x: hidden;
-   transition: background-color 0.3s ease; 
+   transition: background-color 0.3s ease;
 }
- 
-  .caixa-texto h2 {
-      font-family: Arial, sans-serif;
-      font-size: 20px;
-      margin: 15px 0;
-      color: #000000;
-  }
- 
-  .caixa-texto p {
-      margin: 0 0 22px 0;
-      font-family: monospace;
-      font-size: 16px;
-      line-height: 1.18;
-      color: #000000;
-  }
- 
-  /*mudar de cor com as pagina*/
-  .paleta {
-      position: absolute;
-      bottom: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 240px;
-      height: 54px;
-      background-color: #c6c6c6;
-      border: 3px solid #111111;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      box-sizing: border-box;
-  }
- 
-  .cor {
-      width: 37px;
-      height: 37px;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.15s;
-  }
- 
-  .cor:hover {
-      transform: scale(1.1);
-  }
- 
-  .preto {
-      background-color: #1E1E1E;
-  }
- 
-  .azul {
-      background-color: #0051cc;
-  }
- 
-  .roxo {
-      background-color: #782C77;
-  }
- 
-  .amarelo {
-      background-color: #E0C600;
-  }
- 
-  .oculto {
-      display: none !important;
-  }
- 
-  .aba-conteudo {
-      display: none;
-  }
- 
-  .aba-conteudo.active {
-      display: block;
-  }
 
+.caixa-texto h1 {
+   font-size: 22px;
+   margin-top: 0;
+   color: #000000;
+}
+
+.caixa-texto h2 {
+   font-family: Arial, sans-serif;
+   font-size: 20px;
+   margin: 15px 0;
+   color: #000000;
+}
+
+.caixa-texto p {
+   margin: 0 0 22px 0;
+   font-family: monospace;
+   font-size: 16px;
+   line-height: 1.18;
+   color: #000000;
+}
+
+/* PALETA E BOTOES DE COR */
+.paleta {
+   position: absolute;
+   bottom: 80px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 240px;
+   height: 54px;
+   background-color: #c6c6c6;
+   border: 3px solid #111111;
+   border-radius: 5px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   box-sizing: border-box;
+}
+
+.cor {
+   width: 37px;
+   height: 37px;
+   border-radius: 50%;
+   border: none;
+   cursor: pointer;
+   transition: transform 0.15s;
+}
+
+.cor:hover {
+   transform: scale(1.1);
+}
+
+.preto { background-color: #202020; }
+.azul { background-color: #0066cc; }
+.roxo { background-color: #86358a; }
+.amarelo { background-color: #f0cf00; }
+
+.oculto { display: none !important; }
+.aba-conteudo { display: none; }
+.aba-conteudo.active { display: block; }

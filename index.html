@@ -8,9 +8,17 @@
 </head>
 <body>
 
+    <!-- ELEMENTOS CÓSMICOS / PLANETAS NO FUNDO DO SITE -->
+    <div class="espaco-bg">
+        <span class="planeta p1">🪐</span>
+        <span class="planeta p2">🌍</span>
+        <span class="planeta p3">🌕</span>
+        <span class="planeta p4">☀️</span>
+        <span class="estela e1">✨</span>
+        <span class="estela e2">⭐</span>
+    </div>
 
     <div id="conteudo-principal" class="container">
-
 
         <!-- tela inicial -->
         <div id="tela-inicial">
@@ -18,24 +26,19 @@
                 <h1>Big Bang: A<br>Descoberta à Teoria</h1>
             </div>
 
-
             <div class="box-criadores">
                 <p>Criadores:<br>Peter e Rodrigo</p>
             </div>
-
 
             <button class="btn-acessar" onclick="abrirPagina()">
                 Acessar<br>Páginas
             </button>
         </div>
 
-
-        <!-- tela das pagina -->
+        <!-- tela das paginas -->
         <div id="pagina-conteudo" class="pagina-conteudo oculto">
 
-
             <button class="btn-fechar" onclick="voltarPagina()">X</button>
-
 
             <!-- pagina preto -->
             <section id="aba-preto" class="aba-conteudo active">
@@ -47,7 +50,6 @@
                         <p>Essa visão dominou por séculos, até que novas descobertas no século XX mostraram que o Universo não era estático.</p>
                     </div>
 
-
                     <div class="caixa-texto">
                         <p>No início do século XX, Albert Einstein começou a desenvolver ideias que transformariam a compreensão do Universo. Em 1915, apresentou a Teoria da Relatividade Geral, na qual mostrou que a gravidade não era apenas uma força invisível, mas uma consequência da curvatura do espaço-tempo causada pela matéria e pela energia.</p>
                         <p>Sua teoria explicou fenômenos que a física de Newton não conseguia descrever completamente, como o comportamento da luz ao passar por grandes massas e a existência de fenômenos como os buracos negros.</p>
@@ -55,7 +57,6 @@
                     </div>
                 </div>
             </section>
-
 
             <!-- pagina azul -->
             <section id="aba-azul" class="aba-conteudo">
@@ -68,7 +69,6 @@
                         <p>Faltava uma prova observacional que confirmasse qual dos dois estava correto.</p>
                     </div>
 
-
                     <div class="caixa-texto">
                         <h1>Edwin Hubble e a Expansão</h1>
                         <p>Na década de 1920, os telescópios se tornaram mais avançados, permitindo novas descobertas sobre o Universo. Edwin Hubble, trabalhando no Observatório do Monte Wilson com o telescópio Hooker, estudou pequenas manchas luminosas que muitos cientistas acreditavam fazer parte da Via Láctea.</p>
@@ -77,7 +77,6 @@
                     </div>
                 </div>
             </section>
-
 
             <!-- pagina roxa -->
             <section id="aba-roxo" class="aba-conteudo">
@@ -88,15 +87,14 @@
                         <p>O cientista e padre Georges Lemaître percebeu que o Universo poderia estar em expansão e propôs que, no passado, toda a matéria esteve reunida em um único ponto extremamente denso. Pouco depois, o astrônomo Edwin Hubble confirmou essa ideia ao observar que as galáxias estavam se afastando umas das outras.</p>
                     </div>
 
-
-                    <div class="caixa-texto"><h1>Do Big Bang às Estrelas</h1>
+                    <div class="caixa-texto">
+                        <h1>Do Big Bang às Estrelas</h1>
                         <p>Nascia assim a Teoria do Big Bang, não como uma explosão gigantesca no meio do nada, mas como a rápida expansão do próprio espaço que deu origem a tudo o que existe. À medida que o Universo se expandia, ele também se resfriava, permitindo que as primeiras partículas se unissem para formar os átomos fundamentais, como hidrogênio e hélio.</p>
                         <p>Com o passar dos milhões de anos, a força da gravidade encarregou-se de agrupar esse gás antigo em grandes nuvens densas, dando origem às primeiras estrelas, galáxias e estruturas do cosmos.</p>
                         <p>A confirmação definitiva da teoria veio em 1965 com a descoberta acidental da Radiação Cósmica de Fundo — um "eco" térmico antigo que ainda preenche todo o céu, registrando os momentos iniciais do Universo. Hoje sabemos que vivemos em um Cosmos dinâmico, fascinante e em constante evolução.</p>
                     </div>
                 </div>
             </section>
-
 
             <!-- pagina amarela -->
             <section id="aba-amarelo" class="aba-conteudo">
@@ -110,7 +108,6 @@
                         <p>• Novos telescópios: A necessidade de ver mais longe gerou telescópios espaciais como o Hubble e o James Webb.</p>
                     </div>
 
-
                     <div class="caixa-texto">
                         <h1>O Próximo Passo: A Energia Escura</h1>
                         <p>• Expansão acelerada: Nos anos 1990, astrônomos descobriram que o Universo se afasta cada vez mais rápido.</p>
@@ -120,7 +117,6 @@
                 </div>
             </section>
 
-
             <!-- container com as cores -->
             <div class="paleta">
                 <button class="cor preto" onclick="mudarCor('preto')"></button>
@@ -129,14 +125,10 @@
                 <button class="cor amarelo" onclick="mudarCor('amarelo')"></button>
             </div>
 
-
         </div>
 
-
     </div>
-
 
     <script src="js/script.js"></script>
 </body>
 </html>
-

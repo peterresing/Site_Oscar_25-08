@@ -1,17 +1,17 @@
-// cores de fundo principal
+// Cores de fundo com transparência (RGBA) para mostrar os planetas no fundo
 const coresFundo = {
-    preto: '#1E1E1E',
-    azul: '#0051cc',
-    roxo: '#782C77',
-    amarelo: '#E0C600'
+    preto: 'rgba(32, 32, 32, 0.85)',
+    azul: 'rgba(0, 102, 204, 0.85)',
+    roxo: 'rgba(134, 53, 138, 0.85)',
+    amarelo: 'rgba(240, 207, 0, 0.85)'
 };
 
-// cores das caixas da pagina
+// Cores claras ajustadas para as caixas de texto de cada aba
 const coresCaixa = {
-    preto: '#BCBCBC', 
-    azul: '#A0ACF9', 
-    roxo: '#D9A0F9', 
-    amarelo: '#FCFFA6'
+    preto: '#c6c6c6',
+    azul: '#80bfff',
+    roxo: '#d9b3ff',
+    amarelo: '#fff3a8'
 };
 
 function abrirPagina() {
@@ -28,21 +28,21 @@ function voltarPagina() {
 function mudarCor(cor) {
     const container = document.getElementById('pagina-conteudo');
     
-    // troca a cor de  fundo
+    // Troca o fundo aplicando transparência
     if (coresFundo[cor]) {
         container.style.backgroundColor = coresFundo[cor];
     }
 
-    // esconde todas as abas
+    // Esconde as abas
     const abas = document.querySelectorAll('.aba-conteudo');
     abas.forEach(aba => aba.classList.remove('active'));
 
-    // mostra a pagina clicada
+    // Mostra a aba selecionada
     const abaSelecionada = document.getElementById(`aba-${cor}`);
     if (abaSelecionada) {
         abaSelecionada.classList.add('active');
 
-        // muda a cor das pagina com a caixa de ler
+        // Aplica a cor clara temática nas caixas de texto
         const caixasTexto = abaSelecionada.querySelectorAll('.caixa-texto');
         caixasTexto.forEach(caixa => {
             caixa.style.backgroundColor = coresCaixa[cor];
