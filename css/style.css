@@ -1,6 +1,6 @@
-/* a base do site*/
+/* A BASE DO SITE */
 body {
-   background-color: #e0e0e0;
+   background-color: #E0E0E0;
    font-family: 'Krona One', sans-serif;
    margin: 0;
    height: 100vh;
@@ -19,39 +19,7 @@ body {
    z-index: 2;
 }
 
-/* planeta no fundo do site*/
-.espaco-bg {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-   pointer-events: none;
-   z-index: 1;
-   overflow: hidden;
-}
-
-.planeta, .estela {
-   position: absolute;
-   user-select: none;
-   animation: flutuar 6s ease-in-out infinite alternate;
-}
-
-/* lugar dos planetas */
-.p1 { top: 6%; left: 4%; font-size: 70px; animation-duration: 7s; }   /* saturno */
-.p2 { bottom: 8%; left: 5%; font-size: 60px; animation-duration: 9s; }  /* terra */
-.p3 { top: 8%; right: 5%; font-size: 50px; animation-duration: 6s; }  /* lua */
-.p4 { bottom: 6%; right: 4%; font-size: 75px; animation-duration: 8s; } /* sol */
-
-.e1 { top: 45%; left: 2%; font-size: 28px; animation-duration: 4s; }   /* Brilho */
-.e2 { top: 48%; right: 2%; font-size: 32px; animation-duration: 5s; }  /* estrela */
-
-@keyframes flutuar {
-   0% { transform: translateY(0px) rotate(0deg); }
-   100% { transform: translateY(-20px) rotate(10deg); }
-}
-
-/* tela inicial */
+/* TELA INICIAL */
 #tela-inicial {
    display: flex;
    flex-direction: column;
@@ -111,13 +79,15 @@ body {
    background-color: #c6c6c6;
 }
 
-/* as paginas */
+/* TELA DE CONTEÚDO (TOTALMENTE OPACA) */
 .pagina-conteudo {
    width: 100vw;
    height: 100vh;
-   background-color: rgba(32, 32, 32); 
+   background-color: #202020; /* Opaco sem transparência */
    position: relative;
+   padding: 0;
    box-sizing: border-box;
+   overflow: hidden;
    transition: background-color 0.3s ease;
 }
 
@@ -149,6 +119,8 @@ body {
    width: calc(100% - 200px);
    max-width: 1400px;
    margin: 155px auto 0;
+   position: relative;
+   z-index: 3;
 }
 
 .caixa-texto {
@@ -184,7 +156,7 @@ body {
    color: #000000;
 }
 
-/* PALETA E BOTOES DE COR */
+/* PALETA E BOTÕES DE COR */
 .paleta {
    position: absolute;
    bottom: 80px;
@@ -199,6 +171,7 @@ body {
    align-items: center;
    justify-content: space-around;
    box-sizing: border-box;
+   z-index: 5;
 }
 
 .cor {
