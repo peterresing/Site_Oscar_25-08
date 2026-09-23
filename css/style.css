@@ -24,6 +24,8 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+   position: relative;
+   width: 100%;
 }
 
 .box-titulo {
@@ -32,6 +34,8 @@ body {
    padding: 20px 30px;
    width: 450px;
    border-radius: 5px;
+   position: relative;
+   z-index: 2;
 }
 
 .box-titulo h1 {
@@ -50,6 +54,8 @@ body {
    width: 220px;
    border-radius: 5px;
    margin-top: 15px;
+   position: relative;
+   z-index: 2;
 }
 
 .box-criadores p {
@@ -73,22 +79,56 @@ body {
    margin-top: 40px;
    transition: background-color 0.3s ease;
    border-radius: 5px;
+   position: relative;
+   z-index: 2;
 }
 
 .btn-acessar:hover {
    background-color: #c6c6c6;
 }
 
-/* TELA DE CONTEÚDO (TOTALMENTE OPACA) */
+/* PLANETAS / DECORAÇÃO CÓSMICA DA TELA INICIAL */
+.espaco-bg {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   pointer-events: none;
+   z-index: 1;
+   overflow: hidden;
+}
+
+.planeta, .estela {
+   position: absolute;
+   user-select: none;
+   animation: flutuar 6s ease-in-out infinite alternate;
+}
+
+.p1 { top: 12%; left: 10%; font-size: 65px; animation-duration: 7s; }   /* Saturno */
+.p2 { bottom: 12%; left: 12%; font-size: 55px; animation-duration: 9s; }  /* Terra */
+.p3 { top: 14%; right: 12%; font-size: 45px; animation-duration: 6s; }  /* Lua */
+.p4 { bottom: 10%; right: 10%; font-size: 70px; animation-duration: 8s; } /* Sol */
+
+.e1 { top: 48%; left: 8%; font-size: 25px; animation-duration: 4s; }
+.e2 { top: 50%; right: 8%; font-size: 30px; animation-duration: 5s; }
+
+@keyframes flutuar {
+   0% { transform: translateY(0px) rotate(0deg); }
+   100% { transform: translateY(-18px) rotate(10deg); }
+}
+
+/* TELA DE CONTEÚDO (TOTALMENTE OPACA E LIMPA) */
 .pagina-conteudo {
    width: 100vw;
    height: 100vh;
-   background-color: #202020; /* Opaco sem transparência */
+   background-color: #202020;
    position: relative;
    padding: 0;
    box-sizing: border-box;
    overflow: hidden;
    transition: background-color 0.3s ease;
+   z-index: 10;
 }
 
 .btn-fechar {
@@ -119,8 +159,6 @@ body {
    width: calc(100% - 200px);
    max-width: 1400px;
    margin: 155px auto 0;
-   position: relative;
-   z-index: 3;
 }
 
 .caixa-texto {
@@ -171,7 +209,6 @@ body {
    align-items: center;
    justify-content: space-around;
    box-sizing: border-box;
-   z-index: 5;
 }
 
 .cor {
