@@ -1,4 +1,4 @@
-/* a base do site */
+/* BASE DO SITE */
 body {
    background-color: #E0E0E0;
    font-family: 'Krona One', sans-serif;
@@ -19,7 +19,7 @@ body {
    z-index: 2;
 }
 
-/* tela inicial */
+/* TELA INICIAL */
 #tela-inicial {
    display: flex;
    flex-direction: column;
@@ -36,7 +36,6 @@ body {
    border-radius: 5px;
    position: relative;
    z-index: 2;
-   box-shadow: 7px 7px #000000;
 }
 
 .box-titulo h1 {
@@ -57,7 +56,6 @@ body {
    margin-top: 15px;
    position: relative;
    z-index: 2;
-   box-shadow: 7px 7px #000000;
 }
 
 .box-criadores p {
@@ -83,48 +81,34 @@ body {
    border-radius: 5px;
    position: relative;
    z-index: 2;
-   box-shadow: 7px 7px #000000;
-   transition: transform ease-in-out 0.3s;
 }
 
 .btn-acessar:hover {
    background-color: #c6c6c6;
-   transform: scale(1.04);
-   
 }
 
-/* planetas ou decorações */
-.espaco-bg {
+/* ASTRONAUTAS NA TELA INICIAL */
+.astronauta-bg {
    position: fixed;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
+   left: 4vw;
+   top: 18vh;
+   width: 380px;
+   height: auto;
    pointer-events: none;
    z-index: 1;
-   overflow: hidden;
 }
 
-.planeta, .estela {
-   position: absolute;
-   user-select: none;
-   animation: flutuar 6s ease-in-out infinite alternate;
+.astronauta-bg2 {
+   position: fixed;
+   right: 4vw;
+   top: 18vh;
+   width: 380px;
+   height: auto;
+   pointer-events: none;
+   z-index: 1;
 }
 
-.p1 { top: 12%; left: 10%; font-size: 65px; animation-duration: 7s; }   /* Saturno */
-.p2 { bottom: 12%; left: 12%; font-size: 55px; animation-duration: 9s; }  /* Terra */
-.p3 { top: 14%; right: 12%; font-size: 45px; animation-duration: 6s; }  /* Lua */
-.p4 { bottom: 10%; right: 10%; font-size: 70px; animation-duration: 8s; } /* Sol */
-
-.e1 { top: 48%; left: 8%; font-size: 25px; animation-duration: 4s; }
-.e2 { top: 50%; right: 8%; font-size: 30px; animation-duration: 5s; }
-
-@keyframes flutuar {
-   0% { transform: translateY(0px) rotate(0deg); }
-   100% { transform: translateY(-18px) rotate(10deg); }
-}
-
-/* TELA DE CONTEÚDO (TOTALMENTE OPACA E LIMPA) */
+/* TELA DE CONTEÚDO */
 .pagina-conteudo {
    width: 100vw;
    height: 100vh;
@@ -145,29 +129,29 @@ body {
    height: 50px;
    border-radius: 50%;
    border: none;
-   border: 2px solid #000000;
    background-color: #eeeeee;
-   font-size: 30px;
+   font-size: 42px;
    font-weight: 200;
    cursor: pointer;
    display: flex;
    justify-content: center;
    align-items: center;
    z-index: 10;
-   transition: box-shadow ease 0.3s;
 }
 
 .btn-fechar:hover {
    background-color: #d5d5d5;
-   box-shadow: 0px 5px 10px #000000;
 }
 
+/* CONTEÚDO DE TEXTO (CAMADA SUPERIOR) */
 .conteudo-topo {
    display: flex;
    gap: 24px;
    width: calc(100% - 200px);
    max-width: 1400px;
-   margin: 155px auto 0;
+   margin: 120px auto 0;
+   position: relative;
+   z-index: 5; /* Fica acima do planeta Terra */
 }
 
 .caixa-texto {
@@ -203,10 +187,26 @@ body {
    color: #000000;
 }
 
-/* paleta de cor */
+/* PLANETA TERRA NO FUNDO DO CONTEÚDO */
+.terra {
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+   pointer-events: none;
+}
+
+.terra img {
+   width: 750px;
+   height: auto;
+   display: block;
+}
+
+/* PALETA E BOTÕES DE COR */
 .paleta {
    position: absolute;
-   bottom: 80px;
+   bottom: 40px;
    left: 50%;
    transform: translateX(-50%);
    width: 240px;
@@ -218,6 +218,7 @@ body {
    align-items: center;
    justify-content: space-around;
    box-sizing: border-box;
+   z-index: 6;
 }
 
 .cor {
@@ -226,18 +227,19 @@ body {
    border-radius: 50%;
    border: none;
    cursor: pointer;
-   transition: transform 0.15s;
+   transition: transform 0.2s;
+   transition: box-shadow ease-in-out 0.2s;
 }
 
 .cor:hover {
    transform: scale(1.1);
-   box-shadow: 0px 0px 10px;
+   box-shadow: 0px 3.5px #000000;
 }
 
-.preto { background-color: #202020; }
-.azul { background-color: #0066cc; }
-.roxo { background-color: #86358a; }
-.amarelo { background-color: #f0cf00; }
+.preto { background-color: #1E1E1E; }
+.azul { background-color: #0051cc; }
+.roxo { background-color: #782C77; }
+.amarelo { background-color: #DEEE00; }
 
 .oculto { display: none !important; }
 .aba-conteudo { display: none; }

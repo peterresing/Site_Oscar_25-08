@@ -1,15 +1,15 @@
 const coresFundo = {
-    preto: '#202020',
-    azul: '#0066cc',
-    roxo: '#86358a',
-    amarelo: '#f0cf00'
+    preto: '#1E1E1E',
+    azul: '#0051cc',
+    roxo: '#782C77',
+    amarelo: '#DEEE00'
 };
 
 const coresCaixa = {
     preto: '#c6c6c6',
-    azul: '#80bfff',
-    roxo: '#d9b3ff',
-    amarelo: '#fff3a8'
+    azul: '#A0ACF9',
+    roxo: '#D9A0F9',
+    amarelo: '#FCFFA6'
 };
 
 function abrirPagina() {
