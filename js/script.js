@@ -1,5 +1,5 @@
 const coresFundo = {
-    preto: '#1E1E1E',
+    preto: '#000000',
     azul: '#0051cc',
     roxo: '#782C77',
     amarelo: '#DEEE00'
