@@ -90,6 +90,7 @@ body {
    box-shadow: 5px 5px #000000;
 }
 
+/* imagens */
 .astronauta-bg {
    position: fixed;
    left: 4vw;
@@ -109,6 +110,68 @@ body {
    pointer-events: none;
    z-index: 1;
    transform: rotate(30deg);
+}
+
+.buraconegro {
+   position: absolute;
+   bottom: 175px;
+   left: 21%;
+   transform: translateX(-50%);
+   z-index: 1;
+   pointer-events: none;
+   transform: scale(2);
+}
+
+.buraconegro img {
+   width: 750px;
+   height: auto;
+   display: block;
+}
+
+.nebulosa {
+   position: absolute;
+   bottom: 50px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+   pointer-events: none;
+}
+
+.nebulosa img {
+   width: 750px;
+   height: 750px;
+   display: block;
+   border-radius: 50%;
+}
+
+.sol {
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+   pointer-events: none;
+}
+
+.sol img{
+   width: 780px;
+   height: auto;
+   display: block;
+}
+
+.terra {
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+   pointer-events: none;
+}
+
+.terra img {
+   width: 750px;
+   height: auto;
+   display: block;
 }
 
 .pagina-conteudo {
@@ -188,68 +251,6 @@ body {
    font-size: 16px;
    line-height: 1.18;
    color: #000000;
-}
-
-.buraconegro {
-   position: absolute;
-   bottom: 175px;
-   left: 21%;
-   transform: translateX(-50%);
-   z-index: 1;
-   pointer-events: none;
-   transform: scale(2);
-}
-
-.buraconegro img {
-   width: 750px;
-   height: auto;
-   display: block;
-}
-
-.nebulosa {
-   position: absolute;
-   bottom: 50px;
-   left: 50%;
-   transform: translateX(-50%);
-   z-index: 1;
-   pointer-events: none;
-}
-
-.nebulosa img {
-   width: 750px;
-   height: 750px;
-   display: block;
-   border-radius: 50%;
-}
-
-.sol {
-   position: absolute;
-   bottom: 10px;
-   left: 50%;
-   transform: translateX(-50%);
-   z-index: 1;
-   pointer-events: none;
-}
-
-.sol img{
-   width: 780px;
-   height: auto;
-   display: block;
-}
-
-.terra {
-   position: absolute;
-   bottom: 10px;
-   left: 50%;
-   transform: translateX(-50%);
-   z-index: 1;
-   pointer-events: none;
-}
-
-.terra img {
-   width: 750px;
-   height: auto;
-   display: block;
 }
 
 .paleta {

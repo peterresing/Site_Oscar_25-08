@@ -1,3 +1,4 @@
+//paleta
 const coresFundo = {
     preto: '#000000',
     azul: '#0051cc',
@@ -11,7 +12,7 @@ const coresCaixa = {
     roxo: '#D9A0F9',
     amarelo: '#FCFFA6'
 };
-
+// abrir a pagina
 function abrirPagina() {
     document.getElementById('tela-inicial').classList.add('oculto');
     document.getElementById('pagina-conteudo').classList.remove('oculto');
@@ -22,14 +23,14 @@ function voltarPagina() {
     document.getElementById('pagina-conteudo').classList.add('oculto');
     document.getElementById('tela-inicial').classList.remove('oculto');
 }
-
+// mudança de cor
 function mudarCor(cor) {
     const container = document.getElementById('pagina-conteudo');
     
     if (coresFundo[cor]) {
         container.style.backgroundColor = coresFundo[cor];
     }
-
+    // as  abas
     const abas = document.querySelectorAll('.aba-conteudo');
     abas.forEach(aba => aba.classList.remove('active'));
 
